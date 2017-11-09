@@ -1,11 +1,11 @@
 {
   "name": "k8w-extend-native",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Extended native JS",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "build": "rm -rf dist && tsc -d && cp package.json index.d.ts LICENSE README.md dist/"
+    "build": "rm -rf dist && tsc -d && cp package.json *.d.ts LICENSE README.md dist/"
   },
   "repository": {
     "type": "git",
