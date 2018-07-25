@@ -3,7 +3,7 @@ import 'k8w-super-date';
 import 'k8w-super-object';
 
 declare global {
-    type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
+    type Omit<T, K> = Pick<T, Exclude<keyof T, K>>;
     type Overwrite<T, U> = { [P in Exclude<keyof T, keyof U>]: T[P] } & U;
 }
 
