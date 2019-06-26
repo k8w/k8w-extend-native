@@ -1,6 +1,6 @@
 {
   "name": "k8w-extend-native",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Extended native JS",
   "main": "index.js",
   "scripts": {
