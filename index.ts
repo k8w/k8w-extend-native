@@ -3,7 +3,7 @@ import 'k8w-super-date';
 import 'k8w-super-object';
 
 declare global {
-    type Overwrite<T, U> = { [P in Exclude<keyof T, keyof U>]: T[P] } & U;
+    type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & U;
 }
 
 //应对IE9以下没有console
