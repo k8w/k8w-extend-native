@@ -2,9 +2,7 @@ import 'k8w-linq-array';
 import 'k8w-super-date';
 import 'k8w-super-object';
 
-declare global {
-    type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & U;
-}
+export type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & U;
 
 //应对IE9以下没有console
 if (typeof window != 'undefined' && !window.console) {
