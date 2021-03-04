@@ -1,11 +1,12 @@
 {
   "name": "k8w-extend-native",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Extended native JS",
   "main": "index.js",
+  "exports": "./index.mjs",
   "scripts": {
     "test": "mocha",
-    "build": "rm -rf dist && tsc -d && cp package.json LICENSE README.md dist/"
+    "build": "rm -rf dist && npx tsc -d && mv dist/index.js dist/index.mjs && npx tsc -m commonjs && cp package.json LICENSE README.md dist/"
   },
   "repository": {
     "type": "git",
@@ -16,14 +17,13 @@
   ],
   "author": "k8w",
   "license": "Apache-2.0",
-  "devDependencies": {
-    "@types/mocha": "^2.2.43",
-    "@types/node": "^8.0.34"
-  },
   "typings": "index.d.ts",
   "dependencies": {
     "k8w-linq-array": "*",
     "k8w-super-date": "*",
     "k8w-super-object": "*"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.2"
   }
 }
