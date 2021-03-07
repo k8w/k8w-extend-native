@@ -1,8 +1,8 @@
 {
   "name": "k8w-extend-native",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "Extended native JS",
-  "main": "index.js",
+  "main": "index.cjs",
   "exports": {
     "require": "./index.cjs",
     "import": "./index.mjs"
