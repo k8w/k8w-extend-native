@@ -1,12 +1,15 @@
 {
   "name": "k8w-extend-native",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Extended native JS",
   "main": "index.js",
-  "exports": "./index.mjs",
+  "exports": {
+    "require": "./index.cjs",
+    "import": "./index.mjs"
+  },
   "scripts": {
     "test": "mocha",
-    "build": "rm -rf dist && npx tsc -d && mv dist/index.js dist/index.mjs && npx tsc -m commonjs && cp package.json LICENSE README.md dist/"
+    "build": "rm -rf dist && npx rollup -c && cp package.json LICENSE README.md dist/"
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,8 @@
     "k8w-super-object": "*"
   },
   "devDependencies": {
+    "rollup": "^2.40.0",
+    "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.2.2"
   }
 }
