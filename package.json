@@ -1,10 +1,10 @@
 {
   "name": "k8w-extend-native",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "Extended native JS",
-  "main": "index.cjs",
+  "main": "index.js",
   "exports": {
-    "require": "./index.cjs",
+    "require": "./index.js",
     "import": "./index.mjs"
   },
   "scripts": {
@@ -27,8 +27,8 @@
     "k8w-super-object": "*"
   },
   "devDependencies": {
-    "rollup": "^2.40.0",
+    "rollup": "^2.58.0",
     "rollup-plugin-typescript2": "^0.30.0",
-    "typescript": "^4.2.2"
+    "typescript": "^4.4.3"
   }
 }
